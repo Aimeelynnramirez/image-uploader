@@ -54,12 +54,10 @@ class App extends Component {
         <header className="header">
           <img  className="App-title" src={banner} alt="logo" />
         </header>
-   <ImageUpload><img src={image}/></ImageUpload>
-      <div className= "App-Intro">
+   <ImageUpload></ImageUpload>
+      <div className= "text" >
            
-           <input type="text" placeholder="text value" className="text" onChange={ this.handleImageChange } />
-           <button className="addbutton"  onClick={this.handleImageClick} >Add Item</button>
-           <TextList textItems={list} />
+      
 
            </div>
       </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import image from './Instagram-Feed-Cori-Bush-flipped.png';
 
 
 class ImageUpload extends React.Component {
@@ -8,23 +7,27 @@ class ImageUpload extends React.Component {
       this.state = {
         file: '',
       imagePreviewUrl: '',
-      image:''};
+      image:'https://i.imgur.com/wAlFbE8.png'
+    };
+    this.handleImageChange = this.handleImageChange.bind(this)
+
     }
   
-    _handleSubmit(e) {
+    handleSubmit(e) {
       e.preventDefault();
       // TODO: do something with -> this.state.file
       console.log('handle uploading-', this.state.file);
     }
   
-    _handleImageChange(e) {
+    handleImageChange(e) {
       e.preventDefault();
   
       let reader = new FileReader();
       let file = e.target.files[0];
-  
+      let image = e.target.value;
       reader.onloadend = () => {
         this.setState({
+          image:image,
           file: file,
           imagePreviewUrl: reader.result
         });
@@ -34,27 +37,26 @@ class ImageUpload extends React.Component {
     }
   
     render() {
-      let {imagePreviewUrl} = this.state;
+      let {imagePreviewUrl, image} = this.state;
       let $imagePreview = true;
       if (imagePreviewUrl) {
         $imagePreview = (
-        <div className="previewText"> 
-        Congrats! You Uploaded it!  
-        <p className="a">  
-        <img  className="b" src={imagePreviewUrl} /></p></div>);
+        <div className="previewText">  
+        <div className="b">  
+        <img  className="a" src={imagePreviewUrl} /></div></div>);
       } else {
-        $imagePreview = (<div className="previewText">Please select an Image for Preview</div>);
+        $imagePreview = (<div className="previewText"></div>);
       }
   
       return (
         <div className="previewComponent">
-          <form onSubmit={(e)=>this._handleSubmit(e)}>
+          <form onSubmit={(e)=>this.handleSubmit(e)}>
             <input className="fileInput" 
               type="file" 
-              onChange={(e)=>this._handleImageChange(e)} />
+              onChange={(e)=>this.handleImageChange(e)} />
             <button className="submitButton" 
               type="submit" 
-              onClick={(e)=>this._handleSubmit(e)}>Upload Image</button>
+              onClick={(e)=>this.handleSubmit(e)}>Upload Image</button>
           </form>
           <div className="imgPreview">
            {$imagePreview}
