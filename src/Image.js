@@ -9,6 +9,11 @@ class ImageUpload extends React.Component {
       imagePreviewUrl: '',
       image:'https://i.imgur.com/wAlFbE8.png'
     };
+    this.style = {
+      background:"https://i.imgur.com/Rl0gjuU.png",
+      width: "280px",
+      height: "280px"
+   };
     this.handleImageChange = this.handleImageChange.bind(this)
 
     }
@@ -41,9 +46,9 @@ class ImageUpload extends React.Component {
       let $imagePreview = true;
       if (imagePreviewUrl) {
         $imagePreview = (
-        <div className="previewText">  
+        <div className="previewText"> 
         <div className="b">  
-        <img  className="a" src={imagePreviewUrl} /></div></div>);
+        <img  className="a" style={this.style} src={imagePreviewUrl} /></div></div>);
       } else {
         $imagePreview = (<div className="previewText"></div>);
       }
@@ -58,7 +63,7 @@ class ImageUpload extends React.Component {
               type="submit" 
               onClick={(e)=>this.handleSubmit(e)}>Upload Image</button>
           </form>
-          <div className="imgPreview">
+          <div className="imgPreview" >
            {$imagePreview}
           
           </div>
