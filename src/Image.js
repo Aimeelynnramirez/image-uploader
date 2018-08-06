@@ -12,7 +12,7 @@ class ImageUpload extends React.Component {
     this.style = {
       background:"https://i.imgur.com/Rl0gjuU.png",
       width: "280px",
-      height: "280px"
+      height: "300px"      
    };
     this.handleImageChange = this.handleImageChange.bind(this)
 
@@ -48,9 +48,10 @@ class ImageUpload extends React.Component {
         $imagePreview = (
         <div className="previewText"> 
         <div className="b">  
-        <img  className="a" style={this.style} src={imagePreviewUrl} /></div></div>);
+        <img  className="a" style={this.style} src={imagePreviewUrl} /></div>
+     </div>);
       } else {
-        $imagePreview = (<div className="previewText"></div>);
+        $imagePreview = (<div className="previewText"> </div>);
       }
   
       return (
@@ -66,6 +67,9 @@ class ImageUpload extends React.Component {
           <div className="imgPreview" >
            {$imagePreview}
           
+          </div>
+          <div className="bottomright" >
+          August 6, 2018
           </div>
         </div>
       )
