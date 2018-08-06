@@ -1,18 +1,19 @@
 import React from "react";
 
-// import the Image items component
-  import ImageItem from './ImageItem.js';
+// import the Text items component
+import TextItem from './ImageItem.js';
 
 
-function ImageList(props) {
+function TextList(props) {
   return (
     <div>
         <div>
-            <span className="header-Image">Image:</span>
+            <span className="header-item">Text:</span>
+
         </div> 
-      {props.imageItems.map((c, index) => <ImageItem key={index} name={c. name} />)}
+      {props.textItems.map((c, index) => <TextItem key={index} text={c.text}/>)}
      </div> 
   ); 
 } 
 
-export default ImageList;
+export default TextList;

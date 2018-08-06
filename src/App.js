@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import ImageList from './ImageList';
+import TextList from './ImageList';
 import ImageUpload from './Image.js';
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      imagevalue:'',
-      imageStore: [
+      textvalue:'',
+      textStore: [
         {
-          image:'testing',
+          text:'Comment here for more to see!'
         }  
       ],
     
@@ -22,30 +22,30 @@ class App extends Component {
 
     handleImageChange(e) {
     this.setState({ 
-      imagevalue: e.target.value
+      textvalue: e.target.value
     })
     
   }
 
   handleImageClick(event) {
     let obj = {
-      image: this.state.imagevalue
+      text: this.state.textvalue
    
     };
     
-    let store = this.state.imageStore;
+    let store = this.state.textStore;
      //console.log('this image store has passed', store);
     store.push(obj);
    // console.log('this image store has passed', obj);
 
     this.setState({ 
-      imageStore:  store,
+      textStore:  store,
 
     });
 
   }
   render() {
-    const list = this.state.imageStore;
+    const list = this.state.textStore;
 
     return (
       <div className="App">
@@ -57,12 +57,8 @@ class App extends Component {
       <div className= "App-Intro">
            
            <input type="text" placeholder="text value" className="text" onChange={ this.handleImageChange } />
-         
-         
            <button className="addbutton"  onClick={this.handleImageClick} >Add Item</button>
-       
-     
-           <ImageList imageItems={list} />
+           <TextList textItems={list} />
 
            </div>
       </div>

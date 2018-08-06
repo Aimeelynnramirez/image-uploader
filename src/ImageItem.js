@@ -1,28 +1,26 @@
-import React from "react";
+import React from 'react';
 import PropTypes from "prop-types";
-
-
-
-class ImageItem extends React.Component {
-    constructor(props) {
+//will change this state rendering to image
+class TextItem extends React.Component {
+     constructor(props) {
         super(props);
         this.state = {
-           image: this.props.name
+           text: this.props.text
         }
     }
     render() {
-        const image = this.props.name;
-
-    return  (
-        <div className="Image-item">
+        return (
+        <div className="text-item">
+            <span className="text-item-value"> {this.props.text}</span>
     
-    <span className="image-item-value"> {image}</span>
-        </div> 
- );
+   
+        </div>
+   );
 }
 }
+ TextItem.propTypes = {
+     text: PropTypes.string.isRequired
+    };
 
-ImageItem.propTypes = {
-    name: PropTypes.string.isRequired,
-  };
-export default ImageItem;
+    
+export default TextItem;
