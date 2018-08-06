@@ -5,7 +5,10 @@ import image from './Instagram-Feed-Cori-Bush-flipped.png';
 class ImageUpload extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {file: '',imagePreviewUrl: ''};
+      this.state = {
+        file: '',
+      imagePreviewUrl: '',
+      image:''};
     }
   
     _handleSubmit(e) {
@@ -32,13 +35,13 @@ class ImageUpload extends React.Component {
   
     render() {
       let {imagePreviewUrl} = this.state;
-      let $imagePreview = null;
+      let $imagePreview = true;
       if (imagePreviewUrl) {
         $imagePreview = (
         <div className="previewText"> 
         Congrats! You Uploaded it!  
-        <img src={image}/>  
-        <img src={imagePreviewUrl} /></div>);
+        <p className="a">  
+        <img  className="b" src={imagePreviewUrl} /></p></div>);
       } else {
         $imagePreview = (<div className="previewText">Please select an Image for Preview</div>);
       }

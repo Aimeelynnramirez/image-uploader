@@ -6,7 +6,9 @@ body {
   z-index: -1;
   font-family: sans-serif;
 }
-
+.header {
+  background-color:rgba(126, 65,150);
+}
 .fileInput {
   z-index: -1;
   border-bottom: 4px solid lightgray;
@@ -29,9 +31,23 @@ body {
 }
   img{
     max-width:300px;
+    position:relative;
     width: 100%;
     height: 100%;
   }
+
+
+  .a{
+    position: absolute;
+    width:150px;
+    height:150px;
+   z-index:-10;
+    
+}
+
+ .b {
+    z-index:5;
+}
 .previewText {
   width: 100%;
   margin-top: 20px;
