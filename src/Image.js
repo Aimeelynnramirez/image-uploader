@@ -9,6 +9,9 @@ class ImageUpload extends React.Component {
   
     _handleSubmit(e) {
       e.preventDefault();
+      window.print(this);
+      console.log( 'this is printing');
+  
       // TODO: do something with -> this.state.file
       console.log('handle uploading-', this.state.file);
     }
