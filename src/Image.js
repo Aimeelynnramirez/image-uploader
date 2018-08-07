@@ -9,7 +9,7 @@ class ImageUpload extends React.Component {
   
     _handleSubmit(e) {
       e.preventDefault();
-      window.print(this);
+      window.print( document.body.innerHTML      );
       console.log( 'this is printing');
   
       // TODO: do something with -> this.state.file
