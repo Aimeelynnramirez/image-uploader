@@ -1,10 +1,14 @@
 body {  
   height: 100%;
   width: 100%;
+  font-size:18px;
   margin: 0;
   padding: 0;
   z-index: -1;
   font-family: sans-serif;
+}
+input{
+  font-size:20px;
 }
 
 .fileInput {
@@ -42,9 +46,10 @@ image {
 }
 .submitButton {
   padding: 12px;
+  color:red;
   margin-left: 10px;
   background: white;
-  border: 4px solid lightgray;
+  border: 4px solid blue;
   border-radius: 15px;
   font-weight: 700;
   font-size: 10pt;
@@ -53,6 +58,18 @@ image {
   .submitButton:hover{
     background: #efefef;
 }
+button{
+  padding: 12px;
+  color:red;
+  margin-left: 10px;
+  background: white;
+  border: 4px solid blue;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 10pt;
+  cursor: pointer;
+}
+
 .centerText {
 
   text-align: center;

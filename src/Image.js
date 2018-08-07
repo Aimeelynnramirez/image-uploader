@@ -49,7 +49,7 @@ class ImageUpload extends React.Component {
               onChange={(e)=>this._handleImageChange(e)} />
             <button className="submitButton" 
               type="submit" 
-              onClick={(e)=>this._handleSubmit(e)}>Upload Image</button>
+              onClick={(e)=>this._handleSubmit(e)}>Submit</button>
           </form>
           <div className="imgPreview">
            {$imagePreview}
