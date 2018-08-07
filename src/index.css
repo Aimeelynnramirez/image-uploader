@@ -6,7 +6,21 @@ body {
   z-index: -1;
   font-family: sans-serif;
 }
+.capture#capture{
+  padding-top: 50%;
+  background-color: transparent;
+  position: absolute;
+  background:url("https://i.imgur.com/V8aflPq.png") !important;
+  background-size: 100% !important;
+  background-repeat: no-repeat !important;
+  background-position: center;
+  max-width:280px;
+  max-height:326px;
+  height: 100%;
+  width: 100%;
+}
 button{
+
   color:blue;
  
 

@@ -30,7 +30,7 @@ class ImageUpload extends React.Component {
       
       e.preventDefault();
       // TODO: do something with -> this.state.file
-      html2canvas(document.querySelector("#capture")).then(canvas => {
+      html2canvas(document.querySelector(".imgPreview")).then(canvas => {
         document.body.appendChild(canvas)
     });
       console.log('handle uploading-', this.state.file);
@@ -87,10 +87,9 @@ class ImageUpload extends React.Component {
               type="submit" 
               onClick={(e)=>this.handleSubmit(e)}>Submit</button>
           </form>
-          <body id="capture">
+          <body className="capture" id="capture">
           <div className="imgPreview" >
            {$imagePreview}
-          
           </div>
       
           </body>
