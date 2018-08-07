@@ -27,7 +27,8 @@ h3{
   border-right: 4px solid lightgray;
   border-top: 1px solid black;
   border-left: 1px solid black;
-
+  height: 100%;
+  width: 100%;
   cursor: pointer;
 }
 .imgPreview {
