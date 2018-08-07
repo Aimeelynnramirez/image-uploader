@@ -64,8 +64,8 @@ class ImageUpload extends React.Component {
       if (imagePreviewUrl) {
         $imagePreview = (
         <div className="previewText"> 
-        <div className="b" style={this.style} >  
-        <img  className="a" src={imagePreviewUrl} /></div>
+  
+        <img  className="a" src={imagePreviewUrl} />
      </div>);
       } else {
         $imagePreview = (<div className="previewText"> </div>);
