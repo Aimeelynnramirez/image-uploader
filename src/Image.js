@@ -31,17 +31,12 @@ class ImageUpload extends React.Component {
       this.setState({ 
         file: e.target.value
       })
- 
-    
-    window.print(this);
-    console.log('there is it');
       console.log('handle uploading-', this.state.file);
     }
   
     handleImageChange(e) {
-      e.preventDefault();
-      let reader = new FileReader();
 
+      let reader = new FileReader();
       let file = e.target.files[0];
       var obj = {
        file : file,

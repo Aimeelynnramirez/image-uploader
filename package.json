@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "html2canvas": "^1.0.0-alpha.12",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-datetime": "^2.15.0",
