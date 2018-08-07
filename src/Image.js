@@ -1,5 +1,7 @@
 import React from 'react';
 
+import html2canvas from 'html2canvas';
+
 class ImageUpload extends React.Component {
     constructor(props) {
       super(props);
@@ -21,18 +23,19 @@ class ImageUpload extends React.Component {
       width: "280px",
       height: "300px"      
    };
-    this.handleImageChange = this.handleImageChange.bind(this)
-
+ 
     }
   
     handleSubmit(e) {
+      
       e.preventDefault();
       // TODO: do something with -> this.state.file
-      this.setState({ 
-        file: e.target.value
-      })
+      html2canvas(document.querySelector("#capture")).then(canvas => {
+        document.body.appendChild(canvas)
+    });
       console.log('handle uploading-', this.state.file);
     }
+    
   
     handleImageChange(e) {
 
@@ -50,6 +53,7 @@ class ImageUpload extends React.Component {
           imageStore:  store,
           imagePreviewUrl: reader.result
         });
+        
 
       }
       console.log('this images reader store has passed', store, this);
@@ -70,9 +74,11 @@ class ImageUpload extends React.Component {
       } else {
         $imagePreview = (<div className="previewText"> </div>);
       }
+    
   
       return (
         <div className="previewComponent">
+          <body id="capture">
           <form onSubmit={(e)=>this.handleSubmit(e)}>
             <input className="fileInput" 
               type="file" 
@@ -86,8 +92,9 @@ class ImageUpload extends React.Component {
            {$imagePreview}
           
           </div>
-       
-          <body id="capture">  </body>
+      
+          </body>
+          
 
         </div>
         
