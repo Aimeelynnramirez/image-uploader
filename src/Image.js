@@ -1,61 +1,32 @@
 import React from 'react';
 
-import html2canvas from 'html2canvas';
 
 class ImageUpload extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {
-        file: '',
-        imagevalue:'',
-      imagePreviewUrl: '',
-      image:'https://i.imgur.com/wAlFbE8.png',
-      imageStore: 
-      [   {    
-        image: this.props.image,
-     
-
-      }  
-    ],
-    };
-  
- 
+      this.state = {file: '',imagePreviewUrl: ''};
     }
   
-    handleSubmit(e) {
-      
+    _handleSubmit(e) {
       e.preventDefault();
       // TODO: do something with -> this.state.file
-      html2canvas(document.querySelector(".imgPreview")).then(canvas => {
-        document.body.appendChild(canvas)
-    });
       console.log('handle uploading-', this.state.file);
     }
-    
   
-    handleImageChange(e) {
-
+    _handleImageChange(e) {
+      e.preventDefault();
+  
       let reader = new FileReader();
       let file = e.target.files[0];
-      var obj = {
-       file : file,
-       image : this
-      };
-      let store = this.state.imageStore;
-      console.log('this image store has passed', store);
-      store.push(obj , file);
-     reader.onloadend = (e) => {
+  
+      reader.onloadend = () => {
         this.setState({
-          imageStore:  store,
+          file: file,
           imagePreviewUrl: reader.result
         });
-        
-
       }
-      console.log('this images reader store has passed', store, this);
+  
       reader.readAsDataURL(file)
-
-    // 
     }
   
     render() {
@@ -64,35 +35,27 @@ class ImageUpload extends React.Component {
       if (imagePreviewUrl) {
         $imagePreview = (
         <div className="previewText"> 
-        <div className="b" style={this.style} >  
-        <img  className="a" src={imagePreviewUrl} /></div>
-     </div>);
+        Congrats! You Uploaded it!  
+        <img src={imagePreviewUrl} /></div>);
       } else {
-        $imagePreview = (<div className="previewText"> </div>);
+        $imagePreview = (<div className="previewText">Please select an Image for Preview</div>);
       }
-    
   
       return (
         <div className="previewComponent">
-      { console.log(this.state.output)}
-          <form onSubmit={(e)=>this.handleSubmit(e)}>
+          <form onSubmit={(e)=>this._handleSubmit(e)}>
             <input className="fileInput" 
               type="file" 
-              onChange={(e)=>this.handleImageChange(e)}  ref={ref=> this.fileInput = ref}/>
+              onChange={(e)=>this._handleImageChange(e)} />
             <button className="submitButton" 
               type="submit" 
-              onClick={(e)=>this.handleSubmit(e)}>Submit</button>
+              onClick={(e)=>this._handleSubmit(e)}>Upload Image</button>
           </form>
-          <body className="capture" id="capture">
-          <div className="imgPreview" >
+          <div className="imgPreview">
            {$imagePreview}
-          </div>
-      
-          </body>
           
-
+          </div>
         </div>
-        
       )
     }
   }

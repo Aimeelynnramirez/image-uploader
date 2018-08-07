@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import banner from './Banner.jpg';
+import logo from './BannerHeader.jpg';
 import './App.css';
 import TextList from './ImageList';
 import ImageUpload from './Image.js';
-import image from './Instagram-Feed-Cori-Bush-flipped.png';
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -51,13 +49,15 @@ class App extends Component {
 
     return (
       <div className="App">
-        <header className="header">
-          <img  className="App-title" src={banner} alt="logo" />
+        <header className="App-header">
+          <img src={logo} className="App-header" alt="logo" />
         </header>
-   <ImageUpload></ImageUpload>
-      <div className= "text" >
+      <ImageUpload/>
+      <div className= "App-Intro">
            
-      
+           <input type="text" placeholder="text value" className="text" onChange={ this.handleImageChange } />
+           <button className="addbutton"  onClick={this.handleImageClick} >Add Item</button>
+           <TextList textItems={list} />
 
            </div>
       </div>
