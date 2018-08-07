@@ -64,21 +64,10 @@ class ImageUpload extends React.Component {
   
     render() {
       let {imagePreviewUrl} = this.state;
-      let $imagePreview = null;
-      if (imagePreviewUrl) {
-        $imagePreview = (
-        <div className="previewText"> 
-        <div className="b" style={this.style} >  
-        <img  className="a" src={imagePreviewUrl} /></div>
-     </div>);
-      } else {
-        $imagePreview = (<div className="previewText"> </div>);
-      }
-    
-  
+
       return (
         <div className="previewComponent">
-       
+      { console.log(this.state.output)}
           <form onSubmit={(e)=>this.handleSubmit(e)}>
             <input className="fileInput" 
               type="file" 
@@ -89,7 +78,10 @@ class ImageUpload extends React.Component {
           </form>
           <body className="capture" id="capture">
           <div className="imgPreview" >
-           {$imagePreview}
+       
+        <img  className="a" src={imagePreviewUrl} />
+   
+    
           </div>
       
           </body>

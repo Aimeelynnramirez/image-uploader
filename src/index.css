@@ -45,7 +45,7 @@ button:hover{
   cursor: pointer;
 }
 .imgPreview {
-
+  z-index:5;
   background-color: transparent;
   position: absolute;
   background:url("https://i.imgur.com/V8aflPq.png") !important;
