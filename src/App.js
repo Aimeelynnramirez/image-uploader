@@ -12,10 +12,10 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-header" alt="logo" />
         </header>
-        <div className= "App-Intro">
+    
       <ImageUpload/>
 
-          </div>
+       
       </div>
     );
   }

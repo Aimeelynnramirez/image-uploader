@@ -83,12 +83,14 @@ class ImageUpload extends React.Component {
               type="submit" 
               onClick={(e)=>this.handleSubmit(e)}>Submit</button>
           </form>
-          <body className="capture" id="capture">
           <div className="imgPreview" >
+          <body className="capture" id="capture">
+
            {$imagePreview}
+           </body>
           </div>
       
-          </body>
+        
           
 
         </div>
