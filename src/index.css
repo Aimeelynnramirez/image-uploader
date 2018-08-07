@@ -15,13 +15,11 @@ body {
   border-right: 4px solid lightgray;
   border-top: 1px solid black;
   border-left: 1px solid black;
-
   cursor: pointer;
 }
 .imgPreview {
   background-color: transparent;
   position: absolute;
-  background:url("https://i.imgur.com/V8aflPq.png") !important;
   background-size: 100% !important;
   background-repeat: no-repeat !important;
   background-position: center;
@@ -31,27 +29,22 @@ body {
   width: 100%;
 
 }
-  img{
+img{
   display: block;
-    position:relative;
-    width: 100%;
-    height: 90%;
-  }
-
-
-  .a{
-    position:absolute;
-
-   z-index:-10;
-    
+  position:relative;
+  width: 100%;
+  height: 90%;
+}
+.a{
+  position:absolute;
+  z-index:-10;    
 }
 .b{
   z-index:5;
   
 }
- .text{
-    z-index:5;
-
+.text{
+  z-index:5;
 }
 .previewText {
   width: 100%;
@@ -71,11 +64,10 @@ image {
   font-size: 10pt;
   cursor: pointer;
 }
-  .submitButton:hover{
+.submitButton:hover{
     background: #efefef;
 }
 .centerText {
-
   text-align: center;
   width: 500px;
 }
