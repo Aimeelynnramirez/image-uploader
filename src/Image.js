@@ -19,10 +19,6 @@ class ImageUpload extends React.Component {
     ],
     };
   
-    this.style = {
-      width: "280px",
-      height: "300px"      
-   };
  
     }
   
@@ -64,7 +60,18 @@ class ImageUpload extends React.Component {
   
     render() {
       let {imagePreviewUrl} = this.state;
-
+      let $imagePreview = null;
+      if (imagePreviewUrl) {
+        $imagePreview = (
+        <div className="previewText"> 
+        <div className="b" style={this.style} >  
+        <img  className="a" src={imagePreviewUrl} /></div>
+     </div>);
+      } else {
+        $imagePreview = (<div className="previewText"> </div>);
+      }
+    
+  
       return (
         <div className="previewComponent">
       { console.log(this.state.output)}
@@ -78,10 +85,7 @@ class ImageUpload extends React.Component {
           </form>
           <body className="capture" id="capture">
           <div className="imgPreview" >
-       
-        <img  className="a" src={imagePreviewUrl} />
-   
-    
+           {$imagePreview}
           </div>
       
           </body>
