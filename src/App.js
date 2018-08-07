@@ -54,12 +54,8 @@ class App extends Component {
         </header>
         <div className= "App-Intro">
       <ImageUpload/>
-      <TextList textItems={list}  />
 
-           <input type="text" placeholder="Vote Cori Bush!" className="text" onChange={ this.handleImageChange } />
-           <button className="addbutton"  onClick={this.handleImageClick} >Add Item</button>
-           </div>
-        
+          </div>
       </div>
     );
   }
