@@ -84,7 +84,7 @@ class ImageUpload extends React.Component {
               onChange={(e)=>this.handleImageChange(e)}  ref={ref=> this.fileInput = ref}/>
             <button className="submitButton" 
               type="submit" 
-              onClick={(e)=>this.handleSubmit(e)}>Upload Image</button>
+              onClick={(e)=>this.handleSubmit(e)}>Submit</button>
           </form>
       
           <div className="imgPreview" >

@@ -7,17 +7,22 @@ body {
   font-family: sans-serif;
 }
 button{
-  color:black;
-  border-radius: 2px solid black;
+  color:blue;
+ 
 
 }
+button:hover{
+  color:red;
+ 
 
+}
 
 .header {
   background-color:rgba(126, 65,150);
 }
 .fileInput {
   z-index: -1;
+  font-size:18px;
   border-bottom: 4px solid lightgray;
   border-right: 4px solid lightgray;
   border-top: 1px solid black;
