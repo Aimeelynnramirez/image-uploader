@@ -86,9 +86,7 @@ class ImageUpload extends React.Component {
            {$imagePreview}
           
           </div>
-          <div className="bottomright" >
-          August 6, 2018
-          </div>
+       
           <body id="capture">  </body>
 
         </div>
