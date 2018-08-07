@@ -26,24 +26,18 @@ button{
   cursor: pointer;
 }
 .imgPreview {
-  z-index:-111;
 
-  background-color:rgba(126, 65,150);
+  background-color: transparent;
   position: absolute;
+  background:url("https://i.imgur.com/Rl0gjuU.png") !important;
   background-size: 100% !important;
   background-repeat: no-repeat !important;
   background-position: center;
   max-width:280px;
-  max-height:280px;
+  max-height:326px;
   height: 100%;
   width: 100%;
 
-}
-.imgPreview-over{
-  display: block;
-  position:relative;
-  width: 100%;
-  height: 100%;
 }
   img{
   display: block;

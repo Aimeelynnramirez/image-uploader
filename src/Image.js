@@ -88,7 +88,6 @@ class ImageUpload extends React.Component {
           </form>
       
           <div className="imgPreview" >
-          <img src={ this.state.image }/>
            {$imagePreview}
           
           </div>
