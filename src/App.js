@@ -60,6 +60,7 @@ class App extends Component {
            <TextList textItems={list} />
 
            </div>
+        
       </div>
     );
   }
