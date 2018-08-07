@@ -10,6 +10,13 @@ body {
 input{
   font-size:20px;
 }
+h3{
+  font-size: 20px;
+  position: absolute;
+  text-align: center;
+  padding-left: 13%;
+}
+  
 
 .fileInput {
   z-index: -1;
