@@ -9,7 +9,7 @@ class ImageUpload extends React.Component {
   
     _handleSubmit(e) {
       e.preventDefault();
-      window.print( document.body.innerHTML      );
+      window.print(this, '#imgPreview');
       console.log( 'this is printing');
   
       // TODO: do something with -> this.state.file
@@ -39,7 +39,7 @@ class ImageUpload extends React.Component {
         $imagePreview = (
         <div className="previewText">  
   
-    <h3> I AM READY FOR CHANGE</h3>
+    <h3> #IAMREADYFORCHANGE</h3>
         <img src={imagePreviewUrl} />
         </div>);
       } else {
