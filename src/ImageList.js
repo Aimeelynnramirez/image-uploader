@@ -8,7 +8,7 @@ function TextList(props) {
   return (
     <div>
         <div>
-            <span className="header-item">Text:</span>
+            <span className="header-item">Personalize Your Caption:</span>
 
         </div> 
       {props.textItems.map((c, index) => <TextItem key={index} text={c.text}/>)}

@@ -10,7 +10,7 @@ class App extends Component {
       textvalue:'',
       textStore: [
         {
-          text:'Comment here for more to see!'
+          text:''
         }  
       ],
     
@@ -54,11 +54,10 @@ class App extends Component {
         </header>
         <div className= "App-Intro">
       <ImageUpload/>
-           
-           <input type="text" placeholder="text value" className="text" onChange={ this.handleImageChange } />
-           <button className="addbutton"  onClick={this.handleImageClick} >Add Item</button>
-           <TextList textItems={list} />
+      <TextList textItems={list}  />
 
+           <input type="text" placeholder="Vote Cori Bush!" className="text" onChange={ this.handleImageChange } />
+           <button className="addbutton"  onClick={this.handleImageClick} >Add Item</button>
            </div>
         
       </div>
