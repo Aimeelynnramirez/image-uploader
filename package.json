@@ -13,5 +13,18 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "description": "- `npm install` - `npm run start`",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aimeelynnramirez/testing.git"
+  },
+  "author": "Facebook",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Aimeelynnramirez/testing/issues"
+  },
+  "homepage": "https://github.com/Aimeelynnramirez/testing#readme"
 }
