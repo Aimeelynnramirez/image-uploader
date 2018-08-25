@@ -1,11 +1,7 @@
-
-.App-logo {
-  height: 80px;
+html{
+  background:black;
 }
-
 .App-header {
-  background-color: rgb(104, 42, 137);
-  background-repeat: no-repeat;
   height: 100%;
   width: 100%;
 }
@@ -17,4 +13,18 @@
 .App-intro {
   font-size: large;
 }
+.previewComponent {
+  background:#ccc;
+  box-shadow: 0px 3px #ccc;
+  border: 2px solid whitesmoke;
+}
 
+p{
+  font-family: 'Slabo 27px', serif;
+  position: absolute;
+  background: linear-gradient(to bottom right, black, transparent);
+  width:100%;
+  color:white;
+  font-size:3rem;
+  z-index:1;
+}

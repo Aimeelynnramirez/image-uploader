@@ -1,5 +1,6 @@
 {
-  "name": "imageuploader",
+  "name": "image-uploader-new",
+  "homepage":"https://aimeelynnramirez.github.io/image-uploader-new/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,17 +15,16 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "description": "- `npm install` - `npm run start`",
+  "description": "image-uploader",
   "main": "index.js",
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Aimeelynnramirez/testing.git"
+    "url": "git+https://github.com/Aimeelynnramirez/image-uploader-new.git"
   },
   "author": "Facebook",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Aimeelynnramirez/testing/issues"
-  },
-  "homepage": "https://github.com/Aimeelynnramirez/testing#readme"
+    "url": "https://github.com/Aimeelynnramirez/image-uploader-new"
+  }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import html2canvas from 'html2canvas';
-import photoBanner from './Banner.png';
+import photoBanner from './wonder.png';
 
 class ImageUpload extends React.Component {
   constructor(props) {
@@ -9,7 +9,7 @@ class ImageUpload extends React.Component {
       file: '',
       imagevalue:'',
       imagePreviewUrl: '',
-      image:'https://i.imgur.com/wAlFbE8.png',
+      image:'https://i.imgur.com/R9iO6wA.png',
       imageStore: 
       [   
         {    
@@ -53,7 +53,7 @@ class ImageUpload extends React.Component {
     let $imagePreview = null;
     if (imagePreviewUrl){
       $imagePreview = (
-        <div className="previewText">   
+        <div className="previewText" >   
           <img  className="a" src={imagePreviewUrl}/>
           <img  className="a" src={photoBanner}/>
         </div>
@@ -65,9 +65,9 @@ class ImageUpload extends React.Component {
     return (
       <div className="previewComponent">
         {console.log(this.state.output)}
-        <form onSubmit={(e)=>this.handleSubmit(e)}>
-          <input className="fileInput" type="file" onChange={(e)=>this.handleImageChange(e)}  ref={ref=> this.fileInput = ref}/>
-          <button className="submitButton" type="submit" onClick={(e)=>this.handleSubmit(e)}>Submit</button>
+        <form  onSubmit={(e)=>this.handleSubmit(e)} >
+          <input  className="fileInput" type="file" onChange={(e)=>this.handleImageChange(e)}  ref={ref=> this.fileInput = ref}/>
+          <button style= {{fontSize:'15px'}} className="submitButton" type="submit" onClick={(e)=>this.handleSubmit(e)}>Submit</button>
         </form>
         <div className="imgPreview">
           <body className="capture" id="capture">

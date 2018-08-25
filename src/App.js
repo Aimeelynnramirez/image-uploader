@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import banner from './BannerHeader.jpg';
 import './App.css';
 import ImageUpload from './Image.js';
-import image from './Insta-Banner.png';
 
 class App extends Component {
   constructor(props) {
@@ -49,11 +47,17 @@ class App extends Component {
     const list = this.state.textStore;
 
     return (
-      <div className="App">
-        <header className="header">
-          <img  className="App-title" src={banner} alt="logo" />
+      <div className="App"> 
+        <div className="Title">
+      <p>Welcome to Image Uploader. <br/>
+        Where you can fliter and Image upload with a custom fliter on ReactJs.
+        <br/>
+        Feel free to submit to save to upload again. </p>
+        </div>
+        <header className="header" >
+          <img  className="App-title" src="https://i.imgur.com/ydyL5Pf.png" />
         </header>
-   <ImageUpload></ImageUpload>
+   <ImageUpload />
       <div className= "text" >
            
       
