@@ -1,6 +1,8 @@
 import React from 'react';
 import html2canvas from 'html2canvas';
 import photoBanner from './wonder.png';
+import jsPDF from 'jspdf';
+
 
 class ImageUpload extends React.Component {
   constructor(props) {
@@ -24,9 +26,20 @@ class ImageUpload extends React.Component {
     // TODO: do something with -> this.state.file
       html2canvas(document.querySelector(".imgPreview")).then(canvas => {
         document.body.appendChild(canvas)
-    });
+
+    const input = document.getElementById('imgPreview');
+    html2canvas(input)
+      .then((canvas) => {
+        const imgData = canvas.toDataURL('image/png');
+        const pdf = new jsPDF();
+        pdf.addImage(imgData, 'JPEG', 0, 0);
+         pdf.output('dataurlnewwindow');
+        pdf.save("download.pdf");
+      });    });
+    
     console.log('handle uploading-', this.state.file);
   }
+ 
 
   handleImageChange(e) {
     let reader = new FileReader();
@@ -41,11 +54,14 @@ class ImageUpload extends React.Component {
     reader.onloadend = (e) => {
       this.setState({
         imageStore:  store,
-        imagePreviewUrl: reader.result
-      });
+        imagePreviewUrl: reader.result, 
+      }); 
     }
     console.log('this images reader store has passed', store, this);
-    reader.readAsDataURL(file);
+
+   reader.readAsDataURL(file);
+
+   
   }
 
   render() {
@@ -64,17 +80,24 @@ class ImageUpload extends React.Component {
     // }
     return (
       <div className="previewComponent">
+      <div>
+
+        <button onClick={this.printDocument}>Print</button>
+      </div>
+   
         {console.log(this.state.output)}
         <form  onSubmit={(e)=>this.handleSubmit(e)} >
           <input  className="fileInput" type="file" onChange={(e)=>this.handleImageChange(e)}  ref={ref=> this.fileInput = ref}/>
           <button style= {{fontSize:'15px'}} className="submitButton" type="submit" onClick={(e)=>this.handleSubmit(e)}>Submit</button>
         </form>
-        <div className="imgPreview">
+        <div className="imgPreview" id="imgPreview">
           <body className="capture" id="capture">
             {$imagePreview}
           </body>
         </div>
+        
       </div>
+      
     )
   }
 }

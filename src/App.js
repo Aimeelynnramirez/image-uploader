@@ -49,10 +49,7 @@ class App extends Component {
     return (
       <div className="App"> 
         <div className="Title">
-      <p>Welcome to Image Uploader. <br/>
-        Where you can fliter and Image upload with a custom fliter on ReactJs.
-        <br/>
-        Feel free to submit to save to upload again. </p>
+   
         </div>
         <header className="header" >
           <img  className="App-title" src="https://i.imgur.com/ydyL5Pf.png" />
