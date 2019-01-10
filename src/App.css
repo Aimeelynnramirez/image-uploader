@@ -8,6 +8,7 @@ html{
 
 .App-title {
   font-size: 1.5em;
+  max-height:500px;
 }
 
 .App-intro {
@@ -25,6 +26,6 @@ p{
   background: linear-gradient(to bottom right, black, transparent);
   width:100%;
   color:white;
-  font-size:3rem;
+  font-size:1em;
   z-index:1;
 }

@@ -50,11 +50,16 @@ class App extends Component {
       <div className="App"> 
         <div className="Title">
    
+
         </div>
         <header className="header" >
-          <img  className="App-title" src="https://i.imgur.com/ydyL5Pf.png" />
+        <p>Directions:
+        1. Submit twice to save fliter.<br/>
+        2. Do step one, before saving to: PNG or PDF</p>
+          <img  className="App-title" src="https://d24h4out7wreu3.cloudfront.net/user_store_banner/2495998.png" />
+
         </header>
-   <ImageUpload />
+   <ImageUpload/>
       <div className= "text" >
            
       

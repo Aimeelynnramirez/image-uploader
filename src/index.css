@@ -64,7 +64,7 @@ image {
   max-width:300px;
   width:100%;
 }
-.submitButton {
+.button {
   padding: 12px;
   margin-left: 10px;
   background: white;
@@ -74,7 +74,7 @@ image {
   font-size: 10pt;
   cursor: pointer;
 }
-.submitButton:hover{
+.button:hover{
     background: #efefef;
 }
 .centerText {

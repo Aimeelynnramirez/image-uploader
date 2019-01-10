@@ -24,20 +24,22 @@ class ImageUpload extends React.Component {
   handleSubmit(e) {      
     e.preventDefault();
     // TODO: do something with -> this.state.file
-      html2canvas(document.querySelector(".imgPreview")).then(canvas => {
-        document.body.appendChild(canvas)
-
+     html2canvas(document.querySelector(".imgPreview")).then(canvas => {
+      document.body.appendChild(canvas)
+    });
+    }
+  printDocument(){
     const input = document.getElementById('imgPreview');
     html2canvas(input)
       .then((canvas) => {
+        document.body.appendChild(canvas)
         const imgData = canvas.toDataURL('image/png');
         const pdf = new jsPDF();
         pdf.addImage(imgData, 'JPEG', 0, 0);
          pdf.output('dataurlnewwindow');
         pdf.save("download.pdf");
-      });    });
+      });    
     
-    console.log('handle uploading-', this.state.file);
   }
  
 
@@ -57,7 +59,7 @@ class ImageUpload extends React.Component {
         imagePreviewUrl: reader.result, 
       }); 
     }
-    console.log('this images reader store has passed', store, this);
+    console.log('this images reader store has passed', store, this, e);
 
    reader.readAsDataURL(file);
 
@@ -69,7 +71,8 @@ class ImageUpload extends React.Component {
     let $imagePreview = null;
     if (imagePreviewUrl){
       $imagePreview = (
-        <div className="previewText" >   
+        <div className="previewText" >  
+
           <img  className="a" src={imagePreviewUrl}/>
           <img  className="a" src={photoBanner}/>
         </div>
@@ -82,13 +85,16 @@ class ImageUpload extends React.Component {
       <div className="previewComponent">
       <div>
 
-        <button onClick={this.printDocument}>Print</button>
       </div>
-   
         {console.log(this.state.output)}
         <form  onSubmit={(e)=>this.handleSubmit(e)} >
+
           <input  className="fileInput" type="file" onChange={(e)=>this.handleImageChange(e)}  ref={ref=> this.fileInput = ref}/>
-          <button style= {{fontSize:'15px'}} className="submitButton" type="submit" onClick={(e)=>this.handleSubmit(e)}>Submit</button>
+          <button className="submitButton button" type="submit" onClick={(e)=>this.handleSubmit(e)} >Click twice</button>
+
+          <button className="submitButton button" type="submit" onClick={(e)=>this.handleSubmit(e)}>Save PNG</button>
+          <button className=" button" style= {{fontSize:'15px'}}onClick={this.printDocument}>Print PDF</button>
+
         </form>
         <div className="imgPreview" id="imgPreview">
           <body className="capture" id="capture">
